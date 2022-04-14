@@ -71,42 +71,42 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="auto-style8">
+                     <td>
                         <asp:Label runat="server" Text="Password"></asp:Label>
                     </td>
-                    <td class="auto-style7">
+                     <td>
                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                     </td>
-                    <td class="auto-style7">
+                    <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please Specify a Valid Password"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">
+                     <td>
                         <asp:Label ID="Label2" runat="server" Text="Confirm Password"></asp:Label>
                     </td>
-                    <td class="auto-style1">
+                     <td>
                         <asp:TextBox ID="txtConfPassword" runat="server" TextMode="Password"></asp:TextBox>
                     </td>
-                    <td class="auto-style1">
+                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtConfPassword" ErrorMessage="Please Specify a Valid Password"></asp:RequiredFieldValidator>
                         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtConfPassword" ErrorMessage="The passwords specified by you do not match.Please try again."></asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style15"></td>
-                    <td class="auto-style16">
-                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+                     <td></td>
+                     <td>
+                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
                     </td>
-                    <td class="auto-style16"></td>
+                     <td></td>
                 </tr>
                 <tr>
-                    <td class="auto-style4"></td>
+                     <td></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="auto-style4"></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>

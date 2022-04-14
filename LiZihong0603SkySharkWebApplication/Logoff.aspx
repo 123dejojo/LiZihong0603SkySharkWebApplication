@@ -11,11 +11,17 @@
             width: 673px;
         }
     </style>
+    <style type="text/css">
+        .auto-style1 {
+            width: 686px;
+            height: 170px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
         <div style="height: 275px; width: 683px">
-     <textarea id="TextArea1">
+     <textarea id="TextArea1" class="auto-style1">
          Thank you for using SkyShark Airlines.
          Looking forward to serving you again.
      </textarea>
