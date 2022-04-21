@@ -79,6 +79,11 @@
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Logoff.aspx">Logoff</asp:HyperLink></td>
                 </tr>
                 <tr>
+                    <td colspan="3">
+                        <asp:Label ID="lblMessage" runat="server" Text="" Font-Bold="True" ForeColor="Red"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
                     <td>
                         <asp:Label ID="Label2" runat="server" Text="Filght Number"></asp:Label>
                     </td>
@@ -93,7 +98,9 @@
                         <asp:Label ID="Label3" runat="server" Text="Departure Time"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtDepartureTime" runat="server"></asp:TextBox></td>
+                        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                        <asp:TextBox ID="txtDepartureTime" runat="server"></asp:TextBox>
+                        (HH:MM)</td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDepartureTime" ErrorMessage="Departure Time Required"></asp:RequiredFieldValidator>
                     </td>
@@ -113,7 +120,9 @@
                         <asp:Label ID="Label5" runat="server" Text="Arrival Time"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtArrivalTime" runat="server"></asp:TextBox></td>
+                        <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
+                        <asp:TextBox ID="txtArrivalTime" runat="server"></asp:TextBox>
+                        (HH:MM)</td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtArrivalTime" ErrorMessage="Arrival Time Required"></asp:RequiredFieldValidator>
                     </td>
@@ -184,8 +193,8 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Submit" />
-                        &nbsp;&nbsp;  <asp:Button ID="Button2" runat="server" Text="Cancle" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+                        &nbsp;&nbsp;  <asp:Button ID="btnCancle" runat="server" Text="Cancle" OnClick="btnCancle_Click" />
                     </td>
                     <td></td>
                 </tr>

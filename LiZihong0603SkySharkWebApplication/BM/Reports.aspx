@@ -61,7 +61,7 @@
                     <td>
                         <asp:Label ID="Label2" runat="server" Text="Generate a flight usage report for all flights flown by airline"></asp:Label></td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" BackColor="Silver" BorderColor="Blue" Text="Generete" />
+                        <asp:Button ID="Button1" runat="server" BackColor="Silver" BorderColor="Blue" Text="Generete Flight Usage Report" Width="403px" OnClick="Button1_Click" />
                         </td>
                     <td></td>
                 </tr>
@@ -70,7 +70,7 @@
                         <asp:Label ID="Label3" runat="server" Text="Generate a customer affinity report for top 100 customers"></asp:Label>
                     </td>
                     <td>
-                        <asp:Button ID="Button2" runat="server" BackColor="Silver" BorderColor="Blue" Text="Generate" />
+                        <asp:Button ID="Button2" runat="server" BackColor="Silver" BorderColor="Blue" Text="Generate customer Affinity Report" Width="403px" OnClick="Button2_Click" />
                         </td>
                     <td></td>
                 </tr>
@@ -96,13 +96,11 @@
                             <asp:ListItem>2003</asp:ListItem>
                             <asp:ListItem>2004</asp:ListItem>
                             <asp:ListItem>2005</asp:ListItem>
-                            <asp:ListItem>2020</asp:ListItem>
-                            <asp:ListItem>2021</asp:ListItem>
                             <asp:ListItem>2022</asp:ListItem>
                         </asp:ListBox>
                     </td>
                     <td>
-                        <asp:Button ID="Button3" runat="server" BackColor="Silver" BorderColor="Blue" Text="Generate" />
+                        <asp:Button ID="Button3" runat="server" BackColor="Silver" BorderColor="Blue" Text="Generate Revenue Report" OnClick="Button3_Click" Width="403px" />
                     </td>
                     <td></td>
                 </tr>
@@ -113,8 +111,9 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:GridView ID="GridView1" runat="server">
+                        <asp:GridView ID="DataGrid1" runat="server" DataSourceID="SqlDataSource1">
                         </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                     </td>
 
                 </tr>

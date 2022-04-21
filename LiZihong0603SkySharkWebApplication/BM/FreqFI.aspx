@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="FreqFI.aspx.cs" Inherits="LiZihong0603SkySharkWebApplication.BM.FreqFI" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Business Manager
+    <style type="text/css">
+        .auto-style1 {
+            width: 105px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <form id="form1" runat="server">
@@ -19,7 +24,7 @@
             <table>
                 <tr>
                     <td colspan="2">
-                        <asp:Label ID="Label1" runat="server" Text="Frequent Flier:"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="Generate a flight usage report:"></asp:Label>
                     </td>
                     <td></td>
                 </tr>
@@ -31,35 +36,63 @@
                          <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Logoff.aspx">Logoff</asp:HyperLink></td>
                 </tr>
                 <tr>
-                    <td>text1<asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList></td>
-                    <td>Text2<asp:DropDownList ID="DropDownList2" runat="server">
+                    <td colspan="3">
+                        <asp:Label ID="lblMessage" ForeColor="Red" Font-Bold="false" runat="server" Text=""></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total number of times Follown<asp:DropDownList ID="listTimeFollown" runat="server">
+                        <asp:ListItem>1</asp:ListItem>
+                        <asp:ListItem>2</asp:ListItem>
+                        <asp:ListItem>3</asp:ListItem>
+                        <asp:ListItem>4</asp:ListItem>
+                        <asp:ListItem>5</asp:ListItem>
+                        <asp:ListItem>6</asp:ListItem>
+                        <asp:ListItem>7</asp:ListItem>
+                        <asp:ListItem>8</asp:ListItem>
+                        <asp:ListItem>9</asp:ListItem>
+                        <asp:ListItem>10</asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        </asp:DropDownList></td>
+                    <td>Applicable discount percentage<asp:DropDownList ID="lstDisc1" runat="server">
+                        <asp:ListItem>5</asp:ListItem>
+                        <asp:ListItem>10</asp:ListItem>
+                        <asp:ListItem>15</asp:ListItem>
+                        <asp:ListItem>20</asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
                         </asp:DropDownList>
-                        Text3</td>
+                    </td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Button" />
+                        <asp:Button ID="Button1" runat="server" Text="Add" OnClick="Button1_Click" />
                     </td>
                 </tr>
                 <tr>
-                    <td>text1<asp:DropDownList ID="DropDownList3" runat="server"></asp:DropDownList></td>
-                    <td>Text2<asp:TextBox ID="TextBox1" runat="server" Width="101px"></asp:TextBox>
-                        Text3</td>
+                    <td>Customer who have paid more than a specified fare<asp:TextBox ID="txtFare" runat="server"></asp:TextBox>
+                    </td>
+                    <td>Applicable discount percentage<asp:DropDownList ID="lstDisc2" runat="server">
+                        <asp:ListItem>5</asp:ListItem>
+                        <asp:ListItem>10</asp:ListItem>
+                        <asp:ListItem>15</asp:ListItem>
+                        <asp:ListItem>20</asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
                     <td>
-                        <asp:Button ID="Button2" runat="server" Text="Button" />
+                        <asp:Button ID="Button2" runat="server" Text="Add" OnClick="Button2_Click" />
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td>
-                        <asp:Button ID="Button3" runat="server" Text="Button" Width="234px" /></td>
+                        <asp:GridView ID="GridView1" runat="server">
+                        </asp:GridView>
+                    </td>
+                    <td>
+                        &nbsp;</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td colspan="3">
-                        <asp:GridView ID="GridView1" runat="server" Width="481px">
-                        </asp:GridView>
-                    </td>
-                    <td></td>
-                    <td></td>
+                        &nbsp;</td>
                 </tr>
                 </table>
             </div>
