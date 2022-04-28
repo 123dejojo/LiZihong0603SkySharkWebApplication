@@ -34,7 +34,7 @@
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Logoff.aspx">Logoff</asp:HyperLink></td>
                 </tr>
             </table>
-            <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="1">
+            <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0">
                 <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
                 <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                 <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -52,10 +52,14 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <asp:Label ID="lblMessage" runat="server" Text="" ForeColor="Red" Font-Bold="True"></asp:Label></td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <asp:Label ID="Label3" runat="server" Text="Flight Number"></asp:Label>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtFlightNo" runat="server"></asp:TextBox></td>
+                                    <asp:TextBox ID="txtFltNo" runat="server"></asp:TextBox></td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -78,9 +82,11 @@
                             </tr>
                             <tr>
                                 <td></td>
-                                <td></td>
                                 <td>
-                                    <asp:Button ID="btnFStatSubmit" runat="server" Text="Submit" /></td>
+                                    <asp:Button ID="btnQueryStatus" runat="server" Text="Query Status" OnClick="btnQueryStatus_Click" />
+                                </td>
+                                <td>
+                                    &nbsp;</td>
                             </tr>
                         </table>
                     </asp:WizardStep>
@@ -94,11 +100,10 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>
-                                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ChangePassword.aspx">Change Password</asp:HyperLink></td>
-                                <td>
-                                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Logoff.aspx">Logoff</asp:HyperLink></td>
+                                    <asp:Label ID="lblTicketStatus" runat="server" Text="" ForeColor="Red" Font-Bold="True"></asp:Label>
+                                </td>
+                                
                             </tr>
                             <tr>
                                 <td>
@@ -112,7 +117,7 @@
                             <tr>
                                 <td></td>
                                 <td>
-                                    <asp:Button ID="btnTStatSubmit" runat="server" Text="Submit" />
+                                    <asp:Button ID="btnTStatSubmit" runat="server" Text="Submit" OnClick="btnTStatSubmit_Click" />
                                 </td>
                                 <td></td>
                             </tr>

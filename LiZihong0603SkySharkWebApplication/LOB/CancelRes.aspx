@@ -35,6 +35,11 @@
                 </tr>
                 <tr>
                     <td>
+                        <asp:Label ID="lblMessage" runat="server" ForeColor="Red" Font-Bold="true" Text=""></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <asp:Label ID="Label2" runat="server" Text="Ticket No"></asp:Label>
                     </td>
                     <td>
@@ -47,7 +52,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnCancel" runat="server" Text="Cancel Reservation" />
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancel Reservation" OnClick="btnCancel_Click" />
                     </td>
                     <td></td>
                 </tr>

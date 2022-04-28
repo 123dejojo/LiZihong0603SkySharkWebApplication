@@ -40,7 +40,7 @@
                     <td></td>
                 </tr>
             </table>
-            <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0">
+            <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0" OnNextButtonClick="Wizard1_NextButtonClick" OnFinishButtonClick="Wizard1_FinishButtonClick">
                 <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
                 <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                 <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -54,7 +54,12 @@
                                 <td colspan="3">
                                     <asp:Label ID="Label2" runat="server" Text="Step1:Specify ticket details" Font-Names="Microsoft Sans Serif"></asp:Label>
                                 </td>
-                                <td></td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <asp:Label ID="lblMessageStep1" runat="server" Text="" ForeColor="Red" Font-Bold="True"></asp:Label>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -67,8 +72,8 @@
                                     <asp:Label ID="Label4" runat="server" Text="Class"></asp:Label></td>
                                 <td>
                                     <asp:ListBox ID="lstClass" runat="server">
-                                        <asp:ListItem>Executive</asp:ListItem>
-                                        <asp:ListItem>Business</asp:ListItem>
+                                        <asp:ListItem Value="Exec">Executive</asp:ListItem>
+                                        <asp:ListItem Value="Busi">Business</asp:ListItem>
                                     </asp:ListBox></td>
                             </tr>
                             <tr>
@@ -84,7 +89,7 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <asp:Button ID="btnNext" runat="server" Text="Next" BackColor="Silver" BorderColor="Blue" Font-Names="Microsoft Sans Serif" /></td>
+                                    &nbsp;</td>
                                 <td></td>
                             </tr>
                         </table>
@@ -161,39 +166,33 @@
                             </tr>
                         </table>
                     </asp:WizardStep>
-                    <asp:WizardStep runat="server" Title="Make Reservation">
+                    <asp:WizardStep ID="WizardStep3" runat="server" Title="Make Reservation">
                         <!-- for step 3-->
                         <table>
                             <tr>
-                                <td colspan="3">
+                                <td colspan="2">
                                     <asp:Label ID="Label13" runat="server" Text="Step 3:Confirm Booking" Font-Names="Microsoft Sans Serif"></asp:Label></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <asp:Label ID="lblMessageStep3" runat="server" Text="" ForeColor="Red" Font-Bold="true"></asp:Label>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
                                     <asp:Label ID="Label14" runat="server" Text="Name"></asp:Label></td>
                                 <td>
                                     <asp:TextBox ID="txtName" runat="server"></asp:TextBox></td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>
                                     <asp:Label ID="Label15" runat="server" Text="Email"></asp:Label></td>
                                 <td>
                                     <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
-                                <td>
-                                    <asp:Button ID="btnCreate" runat="server" BackColor="Silver" BorderColor="Black" Font-Names="Microsoft Sans Serif" Text="Create" />
-                                </td>
-                                <td>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnCancel" runat="server" BackColor="Silver" BorderColor="Black" Font-Names="Microsoft Sans Serif" Text="Cancel" />
-                                </td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </table>
                     </asp:WizardStep>
